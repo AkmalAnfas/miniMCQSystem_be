@@ -1,12 +1,19 @@
 const express = require('express');
 const UserRoute = require('./routes/user')
 const QuestionRoute = require('./routes/question');
+const ResultRoute = require('./routes/results');
 
 const app = express();
 app.use(express.json());
 
+
+
+//const cors = require('cors');
+//app.use(cors());
+
 app.use('/user', UserRoute)
 app.use('/question', QuestionRoute);
+app.use('/results', ResultRoute);
 
 const dbConfig = require('./config/database.config.js');
 const mongoose = require('mongoose');

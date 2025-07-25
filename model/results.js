@@ -1,13 +1,13 @@
 const mongoose = require('mongoose');
 
-const schema = new mongoose.Schema({
+const resultSchema = new mongoose.Schema({
     user_id: {
         type: mongoose.Schema.Types.ObjectId,
-        type: String, 
+        type: String,
         required: true
     },
     exam_id: {
-        type: String, 
+        type: String,
         required: true
     },
     score: {
@@ -20,5 +20,5 @@ const schema = new mongoose.Schema({
     }
 });
 
-const Result = mongoose.model('Result', schema);
+const Result = mongoose.model('Results', resultSchema);
 module.exports = Result;
